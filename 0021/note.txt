@@ -1,0 +1,5 @@
+mergeTwoLists
+時間: O(n+m)
+空間: O(n+m)
+
+就是merge sort的merge部分，最前面可以判斷l1, l2是否為空，若是的話回傳另一個ListNode就是答案了。一樣head可以初始化成一個Dummy Node，這樣在while走訪時就不必特地去判斷是否為第一步，別忘了pCur = pCur.next

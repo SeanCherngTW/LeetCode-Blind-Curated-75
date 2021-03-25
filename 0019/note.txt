@@ -1,0 +1,19 @@
+removeNthFromEndV1
+時間: O(n)  # 走訪list兩次
+空間: O(1)
+
+要走訪整條list兩次：
+第一次的目的是找出n在順像是代表第幾個元素
+第二次則是使用pCur來紀錄哪一個元素需要刪除，並執行pPre.next = pCur.next來刪除。若要刪除的元素是第一個，則無法使用這個邏輯（因為pPre是None），此時則直接回傳head.next即可
+
+
+removeNthFromEndV2
+時間: O(n) # 走訪list一次
+空間: O(1)
+
+使用兩個指標，總共只要走訪一次
+目標：定位「從後面算起第n個」的元素，做法：(總長為s)
+    1.先把fast往後移動n次 (這時候fast剩餘的步數為 s-n)
+    2.slow和fast同時移動，直到fast走完為止，也就是說slow和fast都會向前(s-n)步
+    3.當fast走完時，此時的slow就是距離起點(s-n)，距離終點n的位置了
+附註：slow, fast等指標可以在初始化時設一個dummy node: ListNode(0)，這樣就不必額外處理刪除head時的狀況，像是V1版沒有用這個方法初始化，就需要在最後判斷刪除的是否為head

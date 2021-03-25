@@ -1,0 +1,12 @@
+lengthOfLongestSubstringV1
+時間: O(n)
+空間: O(n)
+使用雙指標，並透過每一次的轉set來判斷每個子字串是否為LongestSubstring，若是，則移動fast，找出後續的可能；若否，代表目前子字串有重複，要捨棄最早加入的char，再判斷能不能成為LongestSubstring：把slow往前一步，直到當前子字串為LongestSubstring為止
+
+
+lengthOfLongestSubstringV2
+時間: O(n)
+空間: O(1)
+使用雙指標，並加入set來判斷兩個指標包起來的子字串是否為LongestSubstring，若是，則移動fast找尋更多可能；若否，則不斷移除slow代表的字元，直到符合LongestSubstring後，才能繼續移動fast尋找。
+值得注意的是答案不得為len(char_set)，理由是len(char_set)代表「執行到最後一步時」的LongestSubstring，並不能代表全局的LongestSubstring。
+例如："abcdeab"，res=5，但len(char_set)=3

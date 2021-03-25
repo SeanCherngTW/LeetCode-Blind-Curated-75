@@ -1,0 +1,26 @@
+mergeKLists
+時間: O(nlogn)
+空間: (n*m)
+
+主要概念是先把所有list的head放進Minimum Priority Queue中，這樣就能確保每一次拿出來的node都會是遞增排序好的，處理完一個node時，再把該node的next放進Priority Queue繼續處理，直到Priority Queue為空時代表所有元素皆處理完畢
+
+Priority Queue實作:
+幾個重點
+1. insert時，先插入尾端，然後不斷和parent比較直到parent較小或抵達root時停止，稱為swim(往上游)
+2. pop時，先把root和尾端替換，把尾端pop掉後，從root不斷和左右child比較，直到child較大或沒有child時停止，稱為sink(往下沉)
+3. heap index建議從1開始，而不是0，這樣才能符合 parent = child // 2 和 child = parent * 2 , child = parent * 2 + 1
+
+坑
+1. heap index建議從1開始，而不是0
+2. 續上點，尾端index會是length，root index會是1
+3. sink時，共要判斷四項
+    - 是否有child (用length去看)
+    - 判斷右child是否存在
+    - 再判斷左右child誰比較小
+    - 再判斷這個child是否比parent小
+    - 第一、四點有符合才swap
+    - 第二、三點找出要換到哪個child
+4. sink, swim是一個動態判斷的過程，會不斷使用while判斷目前指標的位置，所以不一定硬要設好看的變數(child, parent)，這樣可能會讓指標錯亂，先把功能寫正確為主
+
+參考
+https://medium.com/@tobby168/用-python-實作-binary-heaps-priority-queue-12e0b82ed7b3
