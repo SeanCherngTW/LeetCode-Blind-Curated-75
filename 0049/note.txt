@@ -1,0 +1,6 @@
+groupAnagrams
+
+時間:O(n)
+空間:O(n)
+
+使用排序過後的string當作hashset的key，來對應到每一個元素應該要分到哪一個Group，最後只要取hashset的value作為回傳值就是答案

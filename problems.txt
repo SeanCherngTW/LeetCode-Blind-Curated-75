@@ -19,3 +19,9 @@ X 5. Longest Palindromic Substring
 * 33. Search in Rotated Sorted Array
 * 39. Combination Sum
 ** 48. Rotate Image
+
+3/27(六)
+49. Group Anagrams
+**DP 53. Maximum Subarray
+* 54. Spiral Matrix
+**DP 55. Jump Game

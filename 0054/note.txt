@@ -1,0 +1,15 @@
+spiralOrder
+
+時間: O(n*m)
+空間: O(n*n)
+
+共分四個方向走，要注意range(a, b)，是包含a但不包含b
+設定row和column的起始和結束，因為有可能走到第二圈
+1. 右：range(col_start, col_end + 1)，結束後row_start += 1，因為這個時候第一個row已經處理完畢了，所以+1，給下一階段使用
+2. 下：range(row_start, row_end + 1)，因為row_start已經在上一階段+1了，所以不用特別調整，一樣處理到最後，代表最後一個col已經處理完了，所以col_end -= 1
+3. 左：同上，最後一個row處理完了，所以row_end += 1
+4. 上：同上，此時代表第一個col處理完了，所以col_start += 1
+
+另外要注意長型和寬型的矩陣，需要在Left和Up額外判斷
+if row_start <= row_end:  # For n*m matrix that n < m
+if col_start <= col_end:  # For n*m matrix that n > m

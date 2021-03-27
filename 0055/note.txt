@@ -1,0 +1,17 @@
+canJumpLinear
+
+時間: O(n)
+空間: O(1)
+
+設定兩個變數，i是目前檢查的位置，從0~n-1，res是看到現在最遠可以走到的位置，如果res > n-1的話就代表可以走到終點，直接回傳True。
+判斷式：res = max(res, nums[i] + i)，對於每一步新的i來說，可以刷新res的只有nums[i] + i
+
+範例：
+nums = [2,3,1,1,4]
+i    = 0 1 2 3 4
+res  = 2 5 x x x -> False
+
+nums = [3,2,1,0,2]
+i    = 0 1 2 3 4
+res  = 3 3 3 3 3 -> False
+
