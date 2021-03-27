@@ -1,0 +1,17 @@
+search
+時間: O(logn)
+空間: O(1)
+
+用兩次Binary Search
+1. 先找出最小值是誰，然後算出pivot(平移的距離)
+2. 找出target
+
+坑：
+判斷 l = mid / r = mid時是否 +- 1，可以去思考說這種狀況時mid有沒有可能是答案，若有可能，那就設定 = mid，若不可能，那就加上 +- 1，例如：
+
+第一次Binary Search
+    - if nums[mid] > nums[r]，代表mid較大 -> mid不是最小值，不可能是我們要的答案「最小值」，所以設l = mid + 1
+    - else: 代表mid是相對小值，那就有可能剛好是最小值，所以設r = mid
+
+第二次Binary Search
+    - 判斷是否大於或等於target，而我們要找的目標是等於target，既然都不等於了，那mid自然不可能是答案，所以就需要用 mid += 1

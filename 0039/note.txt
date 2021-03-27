@@ -1,0 +1,11 @@
+combinationSum
+
+let n = len(candidates)
+let m = target
+時間：O(n) ~ O(len(nums)^target) or O(n^m)
+
+使用backtracking，重點是先將candidates排序
+因為元素可以重複被使用，所以遞迴呼叫backtrack時傳入的start index是i，過程中一個一個把元素加入，然後判斷這些元素的和有沒有大於target，若大於，則直接回傳，進入到res.pop()，把多餘的元素丟掉後再嘗試看看；若等於，則直接加到final當正確答案；若小於，則繼續res.append
+
+時間: O(n)，例如target比所有元素都小時，for迴圈會在每一次append後就return，所以只要把所有元素都跑一次就結束
+時間: O(n^m)，最差的狀況是要把所有可能都展開一次，假設candidate=[1,1,1]，target=5，會需要嘗試所有[1,1,1,1,1]的組合，也就是說，backtrack在元素可以重複使用的情況下，對於一個元素展開的樹高會是m，又因為共有n個元素，所以會是O(n^m)
