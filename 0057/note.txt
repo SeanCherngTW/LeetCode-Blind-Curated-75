@@ -1,0 +1,5 @@
+insert
+時間: O(n)
+空間: O(n)
+
+參考0056，基本上就先把newInterval插入到正確的intervals位置中，要記得處理插入頭、中間、尾三種case，準備好intervals後，剩下的運算就和0056一樣了

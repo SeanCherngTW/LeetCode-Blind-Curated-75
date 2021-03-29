@@ -1,0 +1,11 @@
+merge
+
+時間: O(nlogn)
+空間: O(n)
+
+非常直覺，不要想太多
+遇到比較難的題目，可以先排序再想想看怎麼解
+排序之後，先把第一個interval放進res，然後再走訪剩下的interval，若interval start大於res最後一個值的end，代表是新的區間，就取代掉原本的res最後一個值的end。若沒有overlap，則直接append目前的區間進去
+
+值得注意的是
+res[-1][1] = max(cur[1], res[-1][1])，當確定有overlap時，要檢查新進來的區間的end有沒有比目前的遠，要設定到比較遠的區間才對
