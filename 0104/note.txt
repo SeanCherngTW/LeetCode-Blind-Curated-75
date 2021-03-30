@@ -1,0 +1,8 @@
+maxDepth
+
+時間: O(n)
+空間: O(n) 遞迴stack呼叫次數
+
+只要取左子樹和右子樹的max length即可
+注意if not node: return cur_len - 1
+之所以要減一是因為在進入func時就已經+1了，若發現node為None就必須扣掉之前先給的+1

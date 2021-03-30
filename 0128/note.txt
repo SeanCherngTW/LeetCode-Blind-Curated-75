@@ -1,0 +1,20 @@
+longestConsecutive
+
+時間: O(nlogn)
+空間: O(n)
+
+先排序後，從小到大一個一個檢查值有沒有連續，注意可能有重複值要跳過
+
+
+longestConsecutiveNoSort
+
+時間: O(n)
+空間: O(n)
+
+使用一個hashmap紀錄每一個「元素所在的連續seq」的長度是多少
+關鍵是
+lengths[num - left_length] = length
+lengths[num + right_length] = length
+
+為什麼是 - left / + right 而不是 -1 / +1 呢
+因為 - left / + right 代表目前最長長度的左右延伸，所以lengths[num - left_length]和lengths[num + right_length]一定存在。若單純用 +1 / -1，可能會是不存在的元素，就有可能導致高估了最長seq的長度

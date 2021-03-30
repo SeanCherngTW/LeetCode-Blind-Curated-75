@@ -1,0 +1,6 @@
+levelOrder
+
+時間: O(n)
+空間: O(3n) (queue, res, level)
+
+使用queue儲存每一層包含的值，為了避免走訪時重複加入到queue，所以建立了一個level變數儲存當前層的node處理，最後整層都處理完後才加回queue去做下一層

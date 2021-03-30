@@ -1,0 +1,64 @@
+buildTree
+
+時間: O(n)
+空間: O(n)
+
+preorder = [3, 9, 20, 15, 7], inorder = [9, 3, 15, 20, 7]
+
+第一層
+root = 3
+preorder = [9, 20, 15, 7], inorder = [9]
+往下一層
+
+第二層: 左子樹
+root = 9
+preorder = [20, 15, 7], inorder = [] -> return
+回上一層
+
+第二層: 右子樹
+root = 9
+preorder = [20, 15, 7], inorder = [] -> return
+回上一層
+
+第一層: 右子樹
+root = 3
+*** 注意，這裡的preorder直覺上來說應該要是[9, 20, 15, 7]，但卻少了9，這是因為python對於list的修改是有call by reference的效果，所以在第二層做的preorder.pop()會影響到第一層的這裡
+preorder = [20, 15, 7], inorder = [15, 20, 7]
+往下一層
+
+第二層: 左子樹
+root = 20
+preorder = [15, 7], inorder = [15]
+往下一層
+
+第三層: 左子樹
+root = 15
+preorder = [7], inorder = [] -> return
+
+第三層: 右子樹
+root = 15
+preorder = [7], inorder = [] -> return
+
+第二層: 右子樹
+root = 20
+preorder = [7], inorder = [7]
+
+第三層: 左子樹
+root = 7
+preorder = [], inorder = [] -> return
+
+第三層: 右子樹
+root = 7
+preorder = [], inorder = []
+
+
+left [9, 20, 15, 7] [9]
+left [20, 15, 7] []
+right [20, 15, 7] []
+right [20, 15, 7] [15, 20, 7]
+left [15, 7] [15]
+left [7] []
+right [7] []
+right [7] [7]
+left [] []
+right [] []
