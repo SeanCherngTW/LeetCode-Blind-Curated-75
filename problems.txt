@@ -34,3 +34,10 @@ X 5. Longest Palindromic Substring
 *DP 62. Unique Path
 70. Climbing Stairs
 73. Set Matrix Zeroes
+X 76. Minimum Window Substring
+*BT 79. Word Search
+
+3/30(二)
+X 91. Decode Ways
+98. Validate Binary Search Tree
+100. Same Tree
