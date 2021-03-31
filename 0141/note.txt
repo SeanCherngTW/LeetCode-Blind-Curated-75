@@ -1,0 +1,14 @@
+hasCycle
+
+時間: O(n)
+空間: O(n)
+
+因為node物件不會重複，所以把走過的加入set，並不斷node.next走訪。若遇到相同的node出現在set，就代表有Cycle了
+
+
+hasCycle
+
+時間: O(n)
+空間: O(1)
+
+因為node物件不會重複，所以使用雙指標，一次跨一步＆一次跨兩步，若有Cycle，則快的總有一天會倒追慢的一圈，所以當fast == slow時就是True
