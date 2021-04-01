@@ -9,16 +9,16 @@ class Solution:
 
         for i in range(rows):
             for j in range(cols):
-                if grid[i][j] == 1:
+                if grid[i][j] == '1':
                     self.walkIsland(grid, i, j, rows, cols)
                     res += 1
 
         return res
 
     def walkIsland(self, grid, i, j, rows, cols):
-        if i < 0 or j < 0 or i >= rows or j >= cols or grid[i][j] != 1:
+        if i < 0 or j < 0 or i >= rows or j >= cols or grid[i][j] != '1':
             return
-        grid[i][j] = -1
+        grid[i][j] = '-1'
         self.walkIsland(grid, i + 1, j, rows, cols)
         self.walkIsland(grid, i - 1, j, rows, cols)
         self.walkIsland(grid, i, j + 1, rows, cols)
