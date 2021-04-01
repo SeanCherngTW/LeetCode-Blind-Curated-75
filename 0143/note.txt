@@ -1,0 +1,9 @@
+reorderList
+
+時間: O(n)
+空間: O(1)
+
+概念：
+1. 先使用fast, slow找出list中間
+2. 把後半的list反轉
+3. zigzag走訪

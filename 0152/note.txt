@@ -1,0 +1,20 @@
+152. Maximum Product Subarray
+
+時間: O(n)
+空間: O(1)
+
+因為乘法可以負負得正，所以不能用53. Maximum Subarray的方法來做
+概念：儲存最大值和最小值，因為最小值很有可能經過一個負號後就翻轉，當遇到目前值<0時，就代表符號會翻轉，這時候要預先把max, min互換後再相乘，最後於res存放最佳解
+
+思路：對於每一步i，代表nums[0]~nums[i]能夠得到的最大值、最小值
+
+為什麼
+_max = max(nums[i], nums[i] * _max, nums[i] * _min)
+_min = min(nums[i], nums[i] * _min, nums[i] * tmp_max)
+要比較三個項？
+因為你並不知道最大值有沒有可能是負的，最小值有沒有可能是正的
+
+例如
+如果min, max都是正的，且nums[i]>0，那下一個max就會出現在nums[i] * _max
+反之min, max都是負的，但nums[i]<0，那下一個max就會出現在nums[i] * _min
+所以三項都要判斷

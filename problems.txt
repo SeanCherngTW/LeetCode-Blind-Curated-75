@@ -22,7 +22,7 @@ X 5. Longest Palindromic Substring
 
 3/27(六)
 49. Group Anagrams
-**DP 53. Maximum Subarray
+R**DP 53. Maximum Subarray
 * 54. Spiral Matrix
 **DP 55. Jump Game
 
@@ -52,3 +52,12 @@ X 124. Binary Tree Maximum Path Sum
 3/31(三)
 X 133. Clone Graph
 ***DP 139. Word Break
+*********** 143. Reorder List
+
+4/1(四)
+**DP 152. Maximum Product Subarray
+153. Find Minimum in Rotated Sorted Array
+190. Reverse Bits
+191. Number of 1 Bits
+DP 198. House Robber
+200. Number of Islands

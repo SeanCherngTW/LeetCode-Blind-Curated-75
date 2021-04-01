@@ -1,0 +1,17 @@
+rob
+
+時間: O(n)
+空間: O(n)
+
+因為不能連續兩次搶，所以得到
+rob(0) = nums[0]
+rob(1) = max(nums[0], nums[1])
+rob(i) = max(dp[i-2] + nums[i], dp[i-1])
+
+
+robV2
+
+時間: O(n)
+空間: O(1)
+
+只是把dp改成slow, fast雙指標

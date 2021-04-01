@@ -1,0 +1,8 @@
+hammingWeight
+
+時間: O(1)
+空間: O(1)
+
+參考190. Reverse Bits
+基本上就是用 n&1 去取n的最右邊bit
+然後再用 n>>1 把n的bit右移
