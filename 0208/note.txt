@@ -1,0 +1,10 @@
+Trie
+
+init(): 定義好TrieNode，只需要紀錄isWord和children，不需要紀錄value，因為value會記錄在children的keys()裡面
+
+insert(): 一個一個字插入，記得node要更新到最下面那一層的，然後如果children已經存在你要插入的node，則不必插入，直接指向他即可。
+最後記得要把最後一個node.isWord=True
+
+search(): 一個一個char找，若任何時候不存在於目前node的children，就回傳False，最後每個字都找到時，還需要判斷是否isWord，若是，才回傳True
+
+startsWith(): 同search()，但最後不必判斷isWord

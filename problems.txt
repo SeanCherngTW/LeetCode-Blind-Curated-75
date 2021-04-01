@@ -61,3 +61,9 @@ X 133. Clone Graph
 191. Number of 1 Bits
 DP 198. House Robber
 200. Number of Islands
+206. Reverse Linked List
+* 207. Course Schedule
+208. Implement Trie (Prefix Tree)
+X 211. Design Add and Search Words Data Structure
+X 212. Word Search II
+213. House Robber II

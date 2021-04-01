@@ -1,0 +1,10 @@
+reverseList
+
+時間: O(n)
+空間: O(1)
+
+就反轉
+記得 while cur and cur.next 要判斷cur.next，不然迴圈內cur=_next時，cur就會變成None
+
+或是
+while cur 也可以，然後最後回傳pre
