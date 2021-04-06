@@ -19,7 +19,9 @@ class Solution:
         res = max(dp0[2], dp1[2])
 
         for i in range(2, n):
-            if i != n - 1:  # Not the last element
+            if i == n - 1:  # Is the last element
+                dp0[i] = dp0[i-1]
+            else:
                 dp0[i] = max(dp0[i - 2] + nums[i], dp0[i - 1])
             dp1[i] = max(dp1[i - 2] + nums[i], dp1[i - 1])
             res = max(res, dp0[i], dp1[i])
