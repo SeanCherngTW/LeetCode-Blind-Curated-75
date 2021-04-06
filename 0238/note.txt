@@ -1,0 +1,19 @@
+productExceptSelf
+
+時間: O(n)
+空間: O(n)
+
+只要nums有兩個零以上，那不管怎麼乘答案都會是零，所以可以直接回傳[0] * n
+若nums剛好一個零，則只有為零的index的答案會是其他項的積，其他index答案都會是零
+若nums不為零，則先算出所有元素的積(product)，然後每次除以目前index的值，即可得到所有「除了此index以外的值的積」
+
+
+productExceptSelfNoDiv
+
+時間: O(n)
+空間: O(n)
+
+沒用到除法
+概念：走訪兩次nums，
+第一次算出每個index左邊的積
+第二次算出每個index右邊的積 * 第一次的結果

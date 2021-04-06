@@ -1,0 +1,8 @@
+isAnagram
+
+時間: O(n)  # 3n
+空間: O(n)
+
+使用hashmap儲存每一個char出現的字數（此題有限制只會出現小寫字母，所以可以用ASCII當成index，然後改用list）
+
+若有unicode，則改用hashmap即可

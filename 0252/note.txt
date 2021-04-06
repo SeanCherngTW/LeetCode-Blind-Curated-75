@@ -1,0 +1,6 @@
+canAttendMeetings
+
+時間: O(nlogn)  # Sorted
+空間: O(1)
+
+先排好後，看看目前的meeting的開始時間是不是在「到現在為止的所有meeting」都結束之後，若是，則把最後結束時間改為目前meeting的結束時間，繼續往下算；若否，則回傳False

@@ -1,0 +1,13 @@
+invertTreeDFS
+
+時間: O(n)  # num nodes
+空間: O(n)
+
+使用遞迴交換所有左右子樹即可
+注意：invert()裡面的else，要設定一個變數丟進去，不能inplace，例如node.left = self.invert(right)和node.right = self.invert(left)，假設沒有設變數的話，self.invert(left)的left就已經被上一行改變過了，及果就會不符預期
+
+invertTreeBFS
+時間: O(n)  # num nodes
+空間: O(n)
+
+單純左右交換，然後判斷若子束不為None再加入queue繼續處理即可

@@ -1,0 +1,9 @@
+253. Meeting Rooms II
+
+Given an array of meeting time intervals consisting of start and end times [[s1,e1],[s2,e2],...] (si < ei), find the minimum number of conference rooms required.
+
+For example,
+Given [[0, 30],[5, 10],[15, 20]]
+return 2
+
+Solution: Sort the meetings based on start at first. If one meeting finishes and another meeting has no conflict with finished one, then the corresponding room can be used by the following meeting. Let’s use a min heap to store the end of finished meeting. After this process, the number of elements in min heap is the result.

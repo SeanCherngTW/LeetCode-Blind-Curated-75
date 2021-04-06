@@ -1,0 +1,6 @@
+minMeetingRooms
+
+時間: O(nlogn)  # Sorted
+空間: O(n)
+
+先排好後，走訪每一個room，若有room已經空出來（room的結束時間 < 此meeting開始時間），則把此meeting分配到此room，並更新此room的結束時間成「此meeting結束時間」。若所有room都滿了，則開一個新的room

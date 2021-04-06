@@ -1,0 +1,6 @@
+kthSmallest
+
+時間: O(n)
+空間: O(n)
+
+因為是BST，所以做inorder Traversal即可，每算到一個數字時，就把k-1，直到k=0時就代表這個node是「第k小的元素」，就是答案
