@@ -88,3 +88,5 @@ X 235. Lowest Common Ancestor of a Binary Search Tree
 268. Missing Number
 X 271. Encode and Decode Strings
 X 295. Find Median from Data Stream
+X 297. Serialize and Deserialize Binary Tree
+**BS 300. Longest Increasing Subsequence
