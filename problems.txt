@@ -13,7 +13,7 @@ X 5. Longest Palindromic Substring
 21. Merge Two Sorted Lists
 
 3/25(四)
-** 23. Merge k Sorted Lists
+**Heap 23. Merge k Sorted Lists
 
 3/26(五)
 * 33. Search in Rotated Sorted Array
@@ -82,3 +82,9 @@ X 235. Lowest Common Ancestor of a Binary Search Tree
 242. Valid Anagram
 252. Meeting Rooms
 253. Meeting Rooms II
+
+4/7(三)
+261. Graph Valid Tree
+268. Missing Number
+X 271. Encode and Decode Strings
+X 295. Find Median from Data Stream
