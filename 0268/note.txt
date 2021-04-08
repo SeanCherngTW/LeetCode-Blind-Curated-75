@@ -1,0 +1,13 @@
+missingNumber
+
+時間: O(n)
+空間: O(n)
+
+用list index找出遺失的數字
+
+missingNumberV2
+
+時間: O(n)
+空間: O(1)
+
+透過n算出預期的sum後，逐一減去nums的元素，最後得到的值就是缺少的數字
