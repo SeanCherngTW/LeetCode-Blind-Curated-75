@@ -1,0 +1,16 @@
+coinChange
+
+時間: O(n^2)
+空間: O(n)
+
+注意：一般做dp會想說要O(n)，然後是另外開一個dp長度為length(nums)，但像這種題目可以用O(n^2)做，並換個角度思考，使用長度為Amount的dp
+
+dp[0] = 0 Base Case
+dp[i] = 取到i元時，最少只要幾個硬幣（預設為正無限大，代表無解）
+
+我們i=0~n開始解
+loop1 i=0~n
+    loop2  for coin in coins
+        若i<coin，代表這個Coin可以放放看
+        dp[i] = min(dp[i], dp[i - coin] + 1)
+        代表在amount i 時，比較dp[i]（目前最佳）和 dp[i - coin] + 1 （目前最佳的I-coin加上現在的coin）
