@@ -97,3 +97,10 @@ X 297. Serialize and Deserialize Binary Tree
 **DP 338. Counting Bits
 347. Top K Frequent Elements
 **Bit 371. Sum of Two Integers
+題目不清 417. Pacific Atlantic Water Flow
+X 424. Longest Repeating Character Replacement
+435. Non-overlapping Intervals
+572. Subtree of Another Tree
+647. Palindromic Substrings
+
+X: 12

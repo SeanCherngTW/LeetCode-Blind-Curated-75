@@ -1,0 +1,18 @@
+countSubstrings
+
+時間: O(n^3) TLE
+空間: O(1)
+
+走訪window size 0~len(s)，走訪每一個i,j
+並對每一個ij去判斷是否為回文
+
+
+countSubstringsDP
+
+時間: O(n^2) TLE
+空間: O(n^2)
+
+關鍵在if s[i] == s[j] and (j - i < 3 or dp[i + 1][j - 1])
+
+如果s[i] == s[j]一樣，且此substring長度<=3，那一定是回文
+若長度>3，那就要看拿掉s[i] s[j]後，是不是也是回文，若是，則為True
