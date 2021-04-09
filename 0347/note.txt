@@ -1,6 +1,0 @@
-topKFrequent
-
-時間: O(nlogn)
-空間: O(n)
-
-把nums轉成counter紀錄出現次數，最後按照出現次數排序後回傳前k個
