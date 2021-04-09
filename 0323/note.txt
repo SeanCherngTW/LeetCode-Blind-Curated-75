@@ -1,0 +1,14 @@
+countComponentsBFS
+
+時間: O(n+e)
+空間: O(n^2)
+
+countComponentsDFS
+
+時間: O(n+e)
+空間: O(n^2)
+
+先把圖畫出來，因為是無向圖所以對於一條edge要把雙向都加入graph，最後使用BFS「以每一個node為起點去走訪」，並檢查node若沒走訪過才去走訪，這樣每次走完一個while(一次BFS)，就代表走完一個COMponent，最後計算共有幾個component即可
+
+
+
