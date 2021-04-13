@@ -9,3 +9,6 @@ LinkedList雙指標slow, fast的好處
 1. 可以找到中點
 2. 可以找到Cycle
 3. 可以找到由後往前算的第n個元素
+
+
+BS是「r >= l」 大於等於
